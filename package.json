@@ -1,0 +1,17 @@
+{
+  "name": "adventofcode2019",
+  "version": "1.0.0",
+  "description": "My try at AdventOfCode2019 in Javascript to practice ES6/Node fundamentals.",
+  "main": "Dag1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "Javascript",
+    "AOC"
+  ],
+  "author": "Daniel Codes",
+  "license": "ISC",
+  "type": "module"
+}
