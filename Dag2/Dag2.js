@@ -23,10 +23,6 @@ const IntCodeCompiler = (data, noun, verb) => {
     let input2 = data[opcode + 2];
     let output = data[opcode + 3];
 
-    if (parseInt(data[0]) == 19690720) {
-      intCodeLog = 100 * parseInt(data[1]) + parseInt(data[0]);
-      break;
-    }
     if (data[opcode] == 1) {
       data[output] = parseInt(data[input1]) + parseInt(data[input2]);
     } else if (data[opcode] == 2) {
