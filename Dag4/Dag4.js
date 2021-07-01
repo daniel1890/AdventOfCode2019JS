@@ -4,9 +4,9 @@ let ans;
 
 const verifyPass = (lo, hi) => {
   let counter = lo + 1;
-  let count = 0;
+  let correctPasswords = 0;
 
-  while (counter < 585159) {
+  while (counter < hi) {
     let stringNumber = '' + counter;
     let splitNumber = stringNumber.split('');
     let checkMatch = true;
@@ -16,13 +16,16 @@ const verifyPass = (lo, hi) => {
 
     if (checkIncrease == true) {
       checkMatch = adjDigitsMatch(splitNumber);
-      // Is check nog steeds true? voeg 1 toe aan count
-      checkMatch && checkIncrease == true ? (count += 1) : (count = count);
+      // Is check nog steeds true? voeg 1 toe aan correctPasswords
+      checkMatch && checkIncrease == true
+        ? (correctPasswords += 1)
+        : (correctPasswords = correctPasswords);
     }
 
     counter++;
   }
-  return count;
+
+  return correctPasswords;
 };
 
 const adjDigitsMatch = (splitNumber) => {
